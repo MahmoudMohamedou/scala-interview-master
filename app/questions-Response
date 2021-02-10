@@ -1,0 +1,52 @@
+1) REST(Representational State Transfer) is an architecture Style 
+follow some steps(or requierements) for creating a web Services.
+
+while RESTFUL is the name of all service web follow the REST Style.
+
+2)I will be similate an example for more explanations :
+
+suppose we have many clients each client send request to server and wait for response
+the next steep the API recieves HTTP requests from clients and does the request for all
+clients in another word pass the request to the server for handle it , after that the 
+server gives the response to the API and the API send a response in JSON/XML format to 
+the cliens.
+
+
+
+
+3)
+-HTTP/GET in RESTful : Retrieves data from the server using Id.
+-HTTP/POST in RESTful : is usually used for creating an entity.
+-HTTP/PUT  in RESTful : used to update an existing entity.we need be passed an Id
+of this entity.
+
+-HTTP/DELETE : Removes the resource from the server.we need be passed an Id
+
+
+
+
+4) one of the important difference beetween the stateful and stateless protocol is that 
+the stateful  require the server to retain the status information or session details 
+while stateless doesn't;
+
+this is a not complete list for others difference :
+stateful                                                stateless
+-tight dependency between the                           no tight dependency between
+server and client.                                      server and client.
+
+-handle transaction very slowly                         handle very fast.
+
+-heavy to implement an internet.                        easy to implement an internet.
+
+the Protocol HTTP is Stateless.
+
+5) the GET and POST are different and specificly in data transfer or (parameters) providing from a formulaire
+for example, GET is not secure beacause he showing data in URL-Location maybe sensitive Like (password)
+and we have a limited size to transport the data while POST is Secure and not showing 
+the data in URL-Location and we don't have a limited size to transport data.
+
+6)the problem in general comes from understanding the problem so the first instinct 
+is to make sure that I have understood the problem. in case it happens
+I ask the question to someone more experienced or to look on the net in order
+to find an indication or a solution (in a particular or incomplete case) 
+which could be adapted or use as a model to solve the problem.
