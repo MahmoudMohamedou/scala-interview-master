@@ -30,7 +30,7 @@ object WhatsWrong2 {
 
   //Review this code. What could be done better ? How would you do it ?
   /*i think it's will be good to make some things can allowed us to
-   now if the operation(getCEOAndEnterprise) it's be success or Failure */
+   now if the operation(getCEOAndEnterprise) are succeed or Failure */
 
  /* so try/catch will be a good Idea */
   def getCEOAndEnterprise(ceo_id: Option[String]): Future[(Option[CEO], Option[Enterprise])] = {

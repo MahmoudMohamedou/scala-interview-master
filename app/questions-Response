@@ -1,9 +1,9 @@
 1) REST(Representational State Transfer) is an architecture Style 
 follow some steps(or requierements) for creating a web Services.
 
-while RESTFUL is the name of all service web follow the REST Style.
+while RESTFUL is the name of all services web follow the REST Style.
 
-2)I will be similate an example for more explanations :
+2)I will be simulate an example for more explanations :
 
 suppose we have many clients each client send request to server and wait for response
 the next steep the API recieves HTTP requests from clients and does the request for all
@@ -29,7 +29,7 @@ of this entity.
 the stateful  require the server to retain the status information or session details 
 while stateless doesn't;
 
-this is a not complete list for others difference :
+this is one of the feamous differences but not only :
 stateful                                                stateless
 -tight dependency between the                           no tight dependency between
 server and client.                                      server and client.

@@ -66,19 +66,26 @@ object BasicScala {
      def isEmail(maybeEmail: String): Boolean = {
        var localDomain = maybeEmail.split("@");
        
+       //character valid in local party
        val regexLocal:String = "[a-zA-Z0-9!#$%&'*+-/=?^_`{|}~.]";
+       // character valid in domain party
        var regexDomain:String = "[a-zA-Z0-9.-]";
        
+       // test if they don't have one @ or more than 2 in the maybeEmail
        if (localDomain.length == 0 || localDomain.length == 1 || localDomain.length>2)
                 return false;
         else{
             var local:String = localDomain(0);
             var domain:String = localDomain(1);
-            
+            // if else maybe one element of localDomain is an empty so that means 
+            // that @ is the first or the last character
+
             if (local == "" || domain == "") {
                 return false;
             }
             
+//verify if the initial or the last character not are .(dot) or -(dash) in local
+//apply the same things for domain and verify if we have a consecutivly .(dot)
             if (local.charAt(0) == '.' || local.charAt(local.length-1) == '.' || domain.charAt(0) == '-' || domain.charAt(0) == '.'  
             || domain.charAt(domain.length-1) == '-' || domain.charAt(domain.length-1) == '.' || theyHaveTwoSuccessiveDot(local) ){
                 return false;
@@ -86,13 +93,19 @@ object BasicScala {
             
             
             //First Nested Function
+             // this function verify if they have a consecutivly .(dot) in a word
+
                def theyHaveTwoSuccessiveDot(maybeEmail: String): Boolean = {
                 var s= maybeEmail.indexOf(".");
                 
+// if .(dot) don't exist or exist in the last element we are sure that we haven't 
+// a consecutivly .(dot)
                   if (s == -1 || s == maybeEmail.length-1){
                         return false;
                   }else {
+// we strored the position and search from s+1 to maybeEmail.length-1
                       for (i <- s+1 to maybeEmail.length-1){
+//if we passed per an other .(dot) we comparing the difference with 1
                           if (maybeEmail.charAt(i) == '.' && (i-s) == 1){
                                 return true;
                           } 
@@ -104,12 +117,14 @@ object BasicScala {
                       return false;
                   }
     }
-            
+  
+// verify if the local content the allowed character          
               for (i <- 0 to local.length -1) {
                   if (!(""+local.charAt(i)).matches(regexLocal))
                      return false;
               }
-              
+ 
+//   verify if the domain content the allowed character            
               for (j <- 0 to domain.length -1){
                   if (!(""+domain.charAt(j)).matches(regexDomain))
                      return false;

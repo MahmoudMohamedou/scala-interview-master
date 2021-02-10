@@ -17,7 +17,7 @@ or println method if else no result will be appeard */
 
 
   Supporter.city //it's will be print "Paris" because the property are ovveride in a class Supporter. 
-  Supporter.support /* it's will be we print "Ici c'est null !" because he inherit this
+  Supporter.support /* it's will be print "Ici c'est null !" because he inherit this
 property from Interface, and in this interface city is not assign by anything so by default
  String object is null*/
 

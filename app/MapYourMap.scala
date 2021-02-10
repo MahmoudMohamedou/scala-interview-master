@@ -9,9 +9,9 @@ package com.particeep.test
 import scala.util.control.Breaks._
 object MapYourMap {
 
-/*the Idea is very Simple it's will be make a loop around the devNames and will be regard 
+/*the Idea is very Simple it's will be make a loop around the devNames  and will be regard 
 if i passed before to a devDepartments if yes I take devNames and i will be add it to the list
-of devNames existing before if no i will be create a new departements.
+of devNames that they have the same Departments  if no i will be create a new departements.
 */
 
   val devNames = Map("dev1" -> "Pierre", "dev2" -> "Remy", "dev3" -> "Noe", "dev4" -> "Alexandre")
@@ -26,7 +26,7 @@ of devNames existing before if no i will be create a new departements.
       
 //make a loop around the keys
       for (x <- keys){
-//if empty this means that are to first element of keys list
+//if empty this means that it's the first element of keys list
           if (res.isEmpty) {
               //create new departement
               res = res + (devDepartments(x) -> List(devNames(x)));
