@@ -21,8 +21,8 @@ or println method if else no result will be appeard */
 property from Interface, and in this interface city is not assign by anything so by default
  String object is null*/
 
-/*for fix it you can just add after the first line in Supporter Class this sentences:
+/*for fix it we can just add after the first line in Supporter Class this sentences:
 override val support: String = s"Ici c'est $city !";
-and all code will be OK;
+and all things will be OK;
 */
 }

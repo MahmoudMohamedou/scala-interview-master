@@ -25,6 +25,7 @@ object BasicScala {
         }
        // if else we make a loop arround the map and adding "&"
        // we can immediatly observe that the last character will be "&"
+//to solve this problem we will juste "remove" this character after the loop
         else {
              val keys = params.keys;
              var s = "?";
@@ -61,7 +62,7 @@ object BasicScala {
     *lowercase and uppercase Latin letters—a to z and A to Z
     *hyphen or dot — – or . , as long as they are not the initial or final characters 
     *
-    *so this Algorithme solve the probleme for this riquierements
+    *so this Algorithme solve the probleme for this requierements
     */
      def isEmail(maybeEmail: String): Boolean = {
        var localDomain = maybeEmail.split("@");
@@ -118,13 +119,13 @@ object BasicScala {
                   }
     }
   
-// verify if the local content the allowed character          
+// verify if the local party content the allowed character          
               for (i <- 0 to local.length -1) {
                   if (!(""+local.charAt(i)).matches(regexLocal))
                      return false;
               }
  
-//   verify if the domain content the allowed character            
+//   verify if the domain party content the allowed character            
               for (j <- 0 to domain.length -1){
                   if (!(""+domain.charAt(j)).matches(regexDomain))
                      return false;
@@ -154,9 +155,9 @@ object BasicScala {
         var res:Int = 1;
 
 //this is a basic algorithme we make a loop from 1 to n and multiply the last result
-//by i. we can observe that in this case we will not a try to solve the probleme when
+//by i. we can observe that in this case we will not a try to solve the problem when
 //the value of n is negative because in this case the exact value will be a decimal
-//and the signature of fonction return Int.
+//or the signature of fonction return Int.
 
              for(x <- 1 to n) {
                res = res*i;
